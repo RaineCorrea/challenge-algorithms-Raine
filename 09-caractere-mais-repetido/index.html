@@ -14,12 +14,29 @@
         /* 
             Faça um algoritmo que retorne a a letra mias repetida de uma string
         */
-        function mostUsedChar(text) {
+        function mostUsedChar(text) { //abacate  a
             // implementar logica aqui
-            return ""
+            
+           var maisRepetido = 0;
+           var exibirLetra = "";
+            for(var i=0; i<text.length; i++){
+                var letra = text[i]; // a 
+                var contador = 0;
+                for(var j=0; j<text.length; j++){
+                    if(letra == text[j]){
+                        contador ++;
+                    }
+                }
+                if(contador > maisRepetido){
+                    maisRepetido = contador;
+                    exibirLetra = letra[i];
+                }
+            }
+            return {exibirLetra, maisRepetido};         
         }
 
         // Resultados esperados
+        console.log(mostUsedChar("abacate"), 'a') // f
         console.log(mostUsedChar("fdgdfgff"), 'f') // f
         console.log(mostUsedChar("Lorem ipsum"), 'm') // m
         console.log(mostUsedChar("adsassdasd"), 's') // s

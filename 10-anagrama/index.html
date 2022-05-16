@@ -16,11 +16,20 @@
         */
         function isAnagram(test, original) {
             // implementar logica aqui
-            return ""
+            
+            var texto1 = test.toLowerCase();
+            var texto2 = original.toLowerCase();
+
+           texto1 = texto1.split("").sort().join("");
+           texto2 = texto2.split("").sort().join("");
+
+           return (texto1 === texto2);
+
         }
 
         // Resultados esperados
         console.log(isAnagram("foefet", "toffee"), true) // true
+        console.log(isAnagram("abcd", "dcba"), true) // true
         console.log(isAnagram("Buckethead", "DeathCubeK"), true) // true
         console.log(isAnagram("Twoo", "WooT"), true) // true
 

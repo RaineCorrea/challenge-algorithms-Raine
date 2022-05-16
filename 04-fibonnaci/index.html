@@ -17,7 +17,12 @@
         */
         function fib(values) {
             // implementar logica aqui
-            return 0
+            
+            if(values < 2){
+                return values;
+            }
+
+            return fib(values - 1) + fib(values - 2);
         }
 
         // Resultados esperados

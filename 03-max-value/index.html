@@ -16,7 +16,14 @@
         */
         function maxValue(values) {
             // implementar logica aqui
-            return 0
+            
+            var maior = 0;
+            for(var i=0; i<values.length; i++){
+                if(values[i] > maior){
+                    maior = values[i];  
+                }
+            }
+            return maior;
         }
 
         // Resultados esperados
